@@ -1,12 +1,14 @@
 <template>
 <div>
   
-    <v-main  v-if="!$store.state.auth.authenticated">
+    <v-main>
       <v-container>
-         <v-slide-y-transition group>
-            <h3>user info</h3>
-            <h4 v-for = "(users,index) in user" :key="index">{{index}}: <span class="font-weight-thin">{{users}}</span>    </h4>
-         </v-slide-y-transition>
+           <div class="no-task">
+            <v-icon color="accent" right>
+              mdi-alert-decagram
+            </v-icon>
+            هذه الصفحة قيد العمل حاليا
+          </div>
       </v-container>
     </v-main>
 </div>
@@ -20,12 +22,19 @@ export default {
     }
   },
   methods:{
-    getUser(){
-    }
+
   },
-  created() {
-      this.getUser();
-  }
+
 
 }
 </script>
+
+<style  scoped>
+.no-task{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  height: 100vh;
+  color: #97A6BC;
+}
+</style>
