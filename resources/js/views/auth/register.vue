@@ -49,6 +49,7 @@
 <script>
 import axios from 'axios';
 import img from '../../assets/logo.png'
+axios.defaults.baseURL ='https://limitless-journey-59964.herokuapp.com/'
 
 export default {
     data(){

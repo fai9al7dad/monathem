@@ -1,5 +1,5 @@
 import axios from "axios";
-import { castArray } from "lodash";
+axios.defaults.baseURL ='https://limitless-journey-59964.herokuapp.com/'
 
 export default {
     namespaced: true,
