@@ -21,7 +21,7 @@
         
         >
         <div class="d-flex justify-center mb-6">
-            <img :src="image" width="150px">
+            <img :src="image" max-width="150px">
         </div>
         <span v-for="(error,index) in errors" :key="index">
           <v-alert dense text type="error">{{error[0]}} </v-alert> 
