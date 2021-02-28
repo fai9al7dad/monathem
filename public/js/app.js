@@ -42206,7 +42206,7 @@ var render = function() {
                   _c(
                     "v-toolbar-title",
                     { staticClass: "font-weight-bold px-6" },
-                    [_vm._v("المنظم")]
+                    [_vm._v("منننننن")]
                   )
                 ],
                 1

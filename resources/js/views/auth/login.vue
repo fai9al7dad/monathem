@@ -4,7 +4,7 @@
     <v-col md="6" class="mx-auto">
         <v-card >
             <v-toolbar flat color="primary" dark>
-                <v-toolbar-title class="font-weight-bold px-6">المنظم</v-toolbar-title>
+                <v-toolbar-title class="font-weight-bold px-6">منننننن</v-toolbar-title>
             </v-toolbar>
 
             <v-tabs fixed-tabs v-model="tab">
