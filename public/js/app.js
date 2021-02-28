@@ -2152,9 +2152,10 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       this.$refs.form.validate();
-      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/api/register', this.form).then(function () {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().post('https://limitless-journey-59964.herokuapp.com/api/register', this.form).then(function () {
         console.log('saved');
         _this.signedUp = true;
+        _this.errors = [];
       })["catch"](function (error) {
         _this.errors = error.response.data.errors;
       });
@@ -3391,7 +3392,7 @@ try {
 
 window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 axios.defaults.withCredentials = true;
-axios.defaults.baseURL = 'http://127.0.0.1:8000/';
+axios.defaults.baseURL = 'https://limitless-journey-59964.herokuapp.com/';
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
@@ -3418,6 +3419,7 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
 
+(axios__WEBPACK_IMPORTED_MODULE_1___default().defaults.baseURL) = 'https://limitless-journey-59964.herokuapp.com/';
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   namespaced: true,
   state: {
@@ -3565,8 +3567,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_2__);
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -3574,7 +3574,7 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
 
-
+(axios__WEBPACK_IMPORTED_MODULE_1___default().defaults.baseURL) = 'https://limitless-journey-59964.herokuapp.com/';
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   namespaced: true,
   state: {
@@ -3742,6 +3742,7 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
 
+(axios__WEBPACK_IMPORTED_MODULE_1___default().defaults.baseURL) = 'https://limitless-journey-59964.herokuapp.com/';
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   namespaced: true,
   state: {
@@ -42253,7 +42254,7 @@ var render = function() {
             { staticClass: "px-10 py-10", attrs: { rounded: "" } },
             [
               _c("div", { staticClass: "d-flex justify-center mb-6" }, [
-                _c("img", { attrs: { src: _vm.image, width: "150px" } })
+                _c("img", { attrs: { src: _vm.image, "max-width": "150px" } })
               ]),
               _vm._v(" "),
               _vm._l(_vm.errors, function(error, index) {
@@ -42480,7 +42481,7 @@ var render = function() {
             { staticClass: "px-10 py-10", attrs: { rounded: "" } },
             [
               _c("div", { staticClass: "d-flex justify-center mb-6" }, [
-                _c("img", { attrs: { src: _vm.image, width: "150px" } })
+                _c("img", { attrs: { src: _vm.image, "max-width": "150px" } })
               ]),
               _vm._v(" "),
               _vm._l(_vm.errors, function(error, index) {
