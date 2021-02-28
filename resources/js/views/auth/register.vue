@@ -49,7 +49,6 @@
 <script>
 import axios from 'axios';
 import img from '../../assets/logo.png'
-axios.defaults.baseURL ='https://limitless-journey-59964.herokuapp.com/'
 
 export default {
     data(){
@@ -71,9 +70,10 @@ export default {
         submit(){
             this.$refs.form.validate()
 
-            axios.post('/api/register', this.form).then(() =>{
+            axios.post('https://limitless-journey-59964.herokuapp.com/api/register', this.form).then(() =>{
                 console.log('saved');
                 this.signedUp = true;
+                this.errors = [];
             }).catch((error) =>{
                 this.errors = error.response.data.errors;
             })
